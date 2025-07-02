@@ -107,7 +107,7 @@ const wpm = minutes > 0 ? Math.round(wordsTyped / minutes) : 0;
 - Multiple language support
 - Custom sentence input
 
-### 🚀 Getting Started
+## 🚀 Getting Started
 
 **Prerequisites**
 
@@ -144,7 +144,7 @@ npm start
 
 Open http://localhost:3000 in your browser
 
-### 🔧 Configuration
+### Configuration
 
 **API Setup**
 
@@ -155,7 +155,7 @@ Add it to your .env file as REACT_APP_API_KEY
 **Environment Variables**
 envREACT_APP_API_KEY=your_api_key_here
 
-### 🧪 Testing
+### Testing
 
 ```bash
 npm test
@@ -165,7 +165,7 @@ npm test
 
 npm test -- --coverage
 
-### 🤝 Contributing
+### Contributing
 
 - Fork the repository
 - Create a feature branch `git checkout -b feature/amazing-feature`
