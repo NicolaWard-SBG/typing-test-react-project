@@ -148,12 +148,16 @@ Open http://localhost:3000 in your browser
 
 **API Setup**
 
-Sign up for a free account at API Ninjas
+Sign up for a free account at [API Ninjas](https://api-ninjas.com/)
 Get your API key
 Add it to your .env file as REACT_APP_API_KEY
 
 **Environment Variables**
-envREACT_APP_API_KEY=your_api_key_here
+
+```bash
+.env
+REACT_APP_API_KEY=your_api_key_here
+```
 
 ## Testing
 
