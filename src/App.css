@@ -1,0 +1,153 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  height: auto;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.words-per-minute-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  font-weight: bold;
+  line-height: 5px;
+}
+
+.timer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timer-icon {
+  width: 30px;
+  height: 30px;
+  color: orangered;
+}
+
+.type-test-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.test-sentence {
+  font-size: 20px;
+  font-weight: 500;
+  color: #bdbdbd;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.input-box:focus {
+  border: 1.5px solid #1565c0;
+}
+
+.correct-letter {
+  color: #43a047;
+}
+
+.incorrect-letter {
+  color: #e53935;
+}
+
+.text-input {
+  color: #1565c0;
+}
+
+.restart-button {
+  height: 36px;
+  width: 120px;
+  margin-top: 12px;
+  border-radius: 20px;
+  background: orangered;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .timer-container,
+  .type-test-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .test-sentence {
+    font-size: 1rem;
+  }
+  .input-box {
+    font-size: 1rem;
+  }
+  .restart-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .timer-container,
+  .type-test-container {
+    padding: 20px;
+  }
+  .test-sentence {
+    font-size: 20px;
+  }
+}
