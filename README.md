@@ -85,7 +85,7 @@ const wordsTyped =
 const wpm = minutes > 0 ? Math.round(wordsTyped / minutes) : 0;
 ```
 
-### 📋 Features
+## 📋 Features
 
 **Current Features**
 
@@ -155,17 +155,19 @@ Add it to your .env file as REACT_APP_API_KEY
 **Environment Variables**
 envREACT_APP_API_KEY=your_api_key_here
 
-### Testing
+## Testing
 
 ```bash
 npm test
 ```
 
-#### Run tests with coverage
+**Run tests with coverage**
 
+```bash
 npm test -- --coverage
+```
 
-### Contributing
+## Contributing
 
 - Fork the repository
 - Create a feature branch `git checkout -b feature/amazing-feature`
