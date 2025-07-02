@@ -5,27 +5,6 @@ import axios from "axios";
 
 const api_url = "https://api.api-ninjas.com/v1/quotes";
 
-// Thoughts
-//Fetch random sentence from the API
-//Maybe start with hardcoded sentence for now? - Display it
-//Create an input field - DONE
-//Display a timer on screen - DONE
-//Start the timer when the input is not empty - DONE
-//Is the length of the input more than 0? Does it exist? Is it not empty? WHAT? DONE
-//As soon as the sentence is complete stop the timer - DONE
-//When input === sentence stop the timer - how will this be matched? Does it need to be capitalised and all that jazz? DONE
-//Restart button, show the button when the sentence is complete? Start a new round? Fetch a new sentence? Would be nice to have it there all the time - DONE
-
-//TODO
-//turn off auto-fill in the input box
-// Difficulty settings? Case sensitive? toLower() easy mode - exact match?
-// fetch a random sentence from the API
-//look into requestAnimationFrame
-// anytime a letter goes green count it and anttime it goes red count it as an error then calculate the accuracy
-//Next Button? Fetches a new one
-// Refactor?
-//Unit Tests
-
 async function fetchQuote() {
   try {
     const response = await axios.get(api_url, {
