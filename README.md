@@ -1,46 +1,215 @@
-# Getting Started with Create React App
+## Typing Speed Test - React Coding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A typing speed test application built with React and TypeScript that challenges users to type sentences as quickly and accurately as possible.
 
-## Available Scripts
+## 🎯 Project Overview
 
-In the project directory, you can run:
+This project was built as a React coding challenge with the following requirements:
 
-### `npm start`
+The Core Requirements were:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Display The Sentence: Show either a fixed sentence or random quotes from an API
+Typing Area: User types directly into an input field
+Timer: Display millisecond-precision timer that starts when typing begins and stops when complete
+Restart Button: Allow users to start a new round after completion
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Bonus Features Implemented
 
-### `npm test`
+✅ Real-time Character Highlighting: Correct letters appear green, incorrect ones red
+✅ Live Statistics: Words Per Minute (WPM) calculation and display
+✅ Modern Styling: Clean, responsive UI with visual feedback
+✅ API Integration: Fetches random quotes from API Ninjas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🛠️ Technical Stack
 
-### `npm run build`
+React 18 with TypeScript
+Lucide React for icons
+Axios for API requests
+CSS3 with responsive design
+API Ninjas for random quotes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧠 Problem-Solving Approach
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Initial Planning & Thoughts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When approaching this challenge, I broke it down into manageable pieces:
 
-### `npm run eject`
+```javascript
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+My initial thought process:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+// 1. Fetch random sentence from API (or start with hardcoded)
+// 2. Create input field ✓
+// 3. Display timer on screen ✓
+// 4. Start timer when input is not empty ✓
+// 5. Stop timer when input === sentence ✓
+// 6. Add restart functionality ✓
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Development Strategy
 
-## Learn More
+Start Simple: Began with a hardcoded sentence to establish core functionality
+Incremental Development: Added features one by one (timer → input validation → styling)
+API Integration: Enhanced with external quote API after core features worked
+Polish & UX: Added real-time feedback and responsive design
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Key Technical Decisions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Timer Implementation
+
+Used setInterval with 10ms precision for smooth updates
+Implemented proper cleanup to prevent memory leaks
+Format: MM:SS:CS (Minutes:Seconds:Centiseconds)
+
+#### Character Matching Logic
+
+```typescript
+
+Real-time character validation
+
+{sentence.split("").map((char, i) => {
+  let className = "test-sentence";
+  if (textInput[i] !== undefined) {
+    className = textInput[i] === char ? "correct-letter" : "incorrect-letter";
+  }
+  return <span key={i} className={className}>{char}</span>;
+})}
+
+```
+
+#### WPM Calculation
+
+```typescript
+const minutes = time / 60000;
+const wordsTyped =
+  textInput.trim().length === 0 ? 0 : textInput.trim().split(/\s+/).length;
+const wpm = minutes > 0 ? Math.round(wordsTyped / minutes) : 0;
+```
+
+### 📋 Features
+
+**Current Features**
+
+✅ Real-time typing validation with color-coded feedback
+✅ Millisecond-precision timer (MM:SS:CS format)
+✅ Live WPM calculation
+✅ Random quote fetching from API
+✅ Responsive design for mobile and desktop
+✅ Loading states and error handling
+✅ Auto-complete detection
+
+#### Planned Enhancements (To-Do)
+
+Accuracy percentage calculation
+Difficulty settings (case-sensitive mode)
+Performance optimization with requestAnimationFrame
+Comprehensive unit tests
+User statistics persistence
+Multiple language support
+Custom sentence input
+
+### 🚀 Getting Started
+
+**Prerequisites**
+
+Node.js (v14 or higher)
+npm or yarn
+
+**Installation**
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/typing-speed-test.git
+cd typing-speed-test
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Set up environment variables
+
+```bash
+Create .env file in root directory
+REACT_APP_API_KEY=your_api_ninjas_key_here
+```
+
+Start the development server
+
+```bash
+npm start
+```
+
+Open http://localhost:3000 in your browser
+
+### 🔧 Configuration
+
+**API Setup**
+
+Sign up for a free account at API Ninjas
+Get your API key
+Add it to your .env file as REACT_APP_API_KEY
+
+**Environment Variables**
+envREACT_APP_API_KEY=your_api_key_here
+
+### 🧪 Testing
+
+```bash
+npm test
+```
+
+#### Run tests with coverage
+
+npm test -- --coverage
+
+### 📱 Responsive Design
+
+The application is fully responsive with breakpoints at:
+
+Mobile: < 400px
+Tablet: 400px - 700px
+Desktop: > 700px
+
+#### 🎨 Styling Approach
+
+CSS Custom Properties: For consistent theming
+Flexbox Layout: For responsive design
+Mobile-First: Progressive enhancement for larger screens
+Visual Feedback: Color-coded typing validation
+Smooth Transitions: Enhanced user experience
+
+#### 🔄 State Management
+
+The application uses React's built-in state management:
+
+useState for component state
+useEffect for side effects (timer, API calls)
+Proper cleanup for intervals and event listeners
+
+#### 🚨 Error Handling
+
+API failures gracefully fallback to default sentence
+Loading states during quote fetching
+Input validation and edge case handling
+
+### 🤝 Contributing
+
+Fork the repository
+Create a feature branch `git checkout -b feature/amazing-feature`
+Commit your changes `git commit -m 'Add amazing feature'`
+Push to the branch `git push origin feature/amazing-feature`
+Open a Pull Request
+
+### 📊 Performance Notes
+
+Timer runs at 10ms intervals for smooth updates
+Efficient re-renders using React's reconciliation
+Proper cleanup prevents memory leaks
+API calls are debounced and cached
+
+### Status: 🚧 Work in Progress
