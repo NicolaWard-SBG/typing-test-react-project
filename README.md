@@ -1,12 +1,10 @@
-## Typing Speed Test - React Coding Challenge
+# Typing Speed Test - React Coding Challenge
 
 A typing speed test application built with React and TypeScript that challenges users to type sentences as quickly and accurately as possible.
 
 ## 🎯 Project Overview
 
-This project was built as a React coding challenge with the following requirements:
-
-The Core Requirements were:
+This project was built as a React coding challenge with the following core requirements:
 
 Display The Sentence: Show either a fixed sentence or random quotes from an API
 Typing Area: User types directly into an input field
@@ -15,18 +13,18 @@ Restart Button: Allow users to start a new round after completion
 
 ### Bonus Features Implemented
 
-✅ Real-time Character Highlighting: Correct letters appear green, incorrect ones red
-✅ Live Statistics: Words Per Minute (WPM) calculation and display
-✅ Modern Styling: Clean, responsive UI with visual feedback
-✅ API Integration: Fetches random quotes from API Ninjas
+- Real-time Character Highlighting: Correct letters appear green, incorrect ones red
+- Live Statistics: Words Per Minute (WPM) calculation and display
+- Modern Styling: Clean, responsive UI with visual feedback
+- API Integration: Fetches random quotes from API Ninjas
 
 ### 🛠️ Technical Stack
 
-React 18 with TypeScript
-Lucide React for icons
-Axios for API requests
-CSS3 with responsive design
-API Ninjas for random quotes
+- React 18 with TypeScript
+- Lucide React for icons
+- Axios for API requests
+- CSS3 with responsive design
+- API Ninjas for random quotes
 
 ## 🧠 Problem-Solving Approach
 
@@ -38,29 +36,29 @@ When approaching this challenge, I broke it down into manageable pieces:
 
 My initial thought process:
 
-// 1. Fetch random sentence from API (or start with hardcoded)
-// 2. Create input field ✓
-// 3. Display timer on screen ✓
-// 4. Start timer when input is not empty ✓
-// 5. Stop timer when input === sentence ✓
-// 6. Add restart functionality ✓
+1. Fetch random sentence from API (or start with hardcoded)
+2. Create input field ✓
+3. Display timer on screen ✓
+4. Start timer when input is not empty ✓
+5. Stop timer when input === sentence ✓
+6. Add restart functionality ✓
 
 ```
 
 ### Development Strategy
 
-Start Simple: Began with a hardcoded sentence to establish core functionality
-Incremental Development: Added features one by one (timer → input validation → styling)
-API Integration: Enhanced with external quote API after core features worked
-Polish & UX: Added real-time feedback and responsive design
+- Start Simple: Began with a hardcoded sentence to establish core functionality
+- Incremental Development: Added features one by one (timer → input validation → styling)
+- API Integration: Enhanced with external quote API after core features worked
+- Polish & UX: Added real-time feedback and responsive design
 
 ### Key Technical Decisions
 
 #### Timer Implementation
 
-Used setInterval with 10ms precision for smooth updates
-Implemented proper cleanup to prevent memory leaks
-Format: MM:SS:CS (Minutes:Seconds:Centiseconds)
+- Used setInterval with 10ms precision for smooth updates
+- Implemented proper cleanup to prevent memory leaks
+- Format: MM:SS:CS (Minutes:Seconds:Centiseconds)
 
 #### Character Matching Logic
 
@@ -91,23 +89,23 @@ const wpm = minutes > 0 ? Math.round(wordsTyped / minutes) : 0;
 
 **Current Features**
 
-✅ Real-time typing validation with color-coded feedback
-✅ Millisecond-precision timer (MM:SS:CS format)
-✅ Live WPM calculation
-✅ Random quote fetching from API
-✅ Responsive design for mobile and desktop
-✅ Loading states and error handling
-✅ Auto-complete detection
+- Real-time typing validation with color-coded feedback
+- Millisecond-precision timer (MM:SS:CS format)
+- Live WPM calculation
+- Random quote fetching from API
+- Responsive design for mobile and desktop
+- Loading states and error handling
+- Auto-complete detection
 
 #### Planned Enhancements (To-Do)
 
-Accuracy percentage calculation
-Difficulty settings (case-sensitive mode)
-Performance optimization with requestAnimationFrame
-Comprehensive unit tests
-User statistics persistence
-Multiple language support
-Custom sentence input
+- Accuracy percentage calculation
+- Difficulty settings (case-sensitive mode)
+- Performance optimization with requestAnimationFrame
+- Comprehensive unit tests
+- User statistics persistence
+- Multiple language support
+- Custom sentence input
 
 ### 🚀 Getting Started
 
@@ -167,49 +165,12 @@ npm test
 
 npm test -- --coverage
 
-### 📱 Responsive Design
-
-The application is fully responsive with breakpoints at:
-
-Mobile: < 400px
-Tablet: 400px - 700px
-Desktop: > 700px
-
-#### 🎨 Styling Approach
-
-CSS Custom Properties: For consistent theming
-Flexbox Layout: For responsive design
-Mobile-First: Progressive enhancement for larger screens
-Visual Feedback: Color-coded typing validation
-Smooth Transitions: Enhanced user experience
-
-#### 🔄 State Management
-
-The application uses React's built-in state management:
-
-useState for component state
-useEffect for side effects (timer, API calls)
-Proper cleanup for intervals and event listeners
-
-#### 🚨 Error Handling
-
-API failures gracefully fallback to default sentence
-Loading states during quote fetching
-Input validation and edge case handling
-
 ### 🤝 Contributing
 
-Fork the repository
-Create a feature branch `git checkout -b feature/amazing-feature`
-Commit your changes `git commit -m 'Add amazing feature'`
-Push to the branch `git push origin feature/amazing-feature`
-Open a Pull Request
-
-### 📊 Performance Notes
-
-Timer runs at 10ms intervals for smooth updates
-Efficient re-renders using React's reconciliation
-Proper cleanup prevents memory leaks
-API calls are debounced and cached
+- Fork the repository
+- Create a feature branch `git checkout -b feature/amazing-feature`
+- Commit your changes `git commit -m 'Add amazing feature'`
+- Push to the branch `git push origin feature/amazing-feature`
+- Open a Pull Request
 
 ### Status: 🚧 Work in Progress
